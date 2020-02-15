@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -56,10 +57,10 @@ public class NewsVollyTest extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
-        }, new Response.ErrorListener() {
+        },new Response.ErrorListener(){
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                Toast.makeText(NewsVollyTest.this, "Error", Toast.LENGTH_SHORT).show();
             }
         });
 
