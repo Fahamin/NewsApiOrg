@@ -1,10 +1,9 @@
-package news.world.live;
+package news.world.live.rettofit;
 
 import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -13,13 +12,15 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import news.world.live.model.Article;
-import news.world.live.model.NewsDetails;
-import news.world.live.vollyTest.NewsVollyTest;
+import news.world.live.CricketApiLive.CriActivity;
+import news.world.live.R;
+import news.world.live.rettofit.model.Article;
+import news.world.live.rettofit.model.NewsDetails;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, NewsVollyTest.class));
+                startActivity(new Intent(MainActivity.this, CriActivity.class));
               /*  Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();*/
             }
@@ -82,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<NewsDetails> call, Throwable t) {
-
+                Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
             }
         });
 

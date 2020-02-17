@@ -1,4 +1,4 @@
-package news.world.live.model;
+package news.world.live.rettofit.model;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;

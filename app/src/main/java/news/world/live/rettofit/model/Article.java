@@ -1,4 +1,4 @@
-package news.world.live.model;
+package news.world.live.rettofit.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 

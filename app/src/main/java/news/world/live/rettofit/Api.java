@@ -1,8 +1,6 @@
-package news.world.live;
+package news.world.live.rettofit;
 
-import java.util.List;
-
-import news.world.live.model.NewsDetails;
+import news.world.live.rettofit.model.NewsDetails;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Url;
